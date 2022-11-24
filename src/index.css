@@ -183,7 +183,8 @@ main {
   margin: 2rem auto 0 auto;
   text-transform: capitalize;
   font-size: 1.2rem;
-  padding: 0.5rem 0;
+   padding: 0.5rem 0.5rem; 
+  
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
   outline: 1px solid rgba(242, 138, 178, 0.8);

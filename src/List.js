@@ -1,21 +1,33 @@
-import React from 'react';
+import React from "react";
 
-const List = ({people}) => {
-  return (
-    <>
-  {people.map((person)=>{
-    const {id,name,age,image}=person;
-    return (<article key={id} className="person">
-      <img src={image} alt={name}/>
-      <div>
-        <h4>{name}</h4>
-        <p>{age} years</p>
-      </div>
-    </article>
-    );
-  })}
-    </>
-  );
-};
+  function List({api}){
+     return (
+     <> 
+     {api.map((person) =>{
+         
+      const {id,name,birthday,image} = person;
+           return (
+            <article key={id} className="person">
+              <img src={image} alt={name}/>
+                <div>
+                  <h3>{name}</h3>
+                  <p>{birthday}</p>
+                </div>
+            </article>
+           )
+     })}
 
-export default List;
+     </> 
+     )
+  }
+
+  // function old(personAge){
+  //   console.log(personAge)
+  //   let year = new Date(personAge).getFullYear();
+  //   let currentYear = new Date().getFullYear();
+     
+  //   let age  = currentYear - year;
+  //   return age;
+  // }
+
+  export default List;
